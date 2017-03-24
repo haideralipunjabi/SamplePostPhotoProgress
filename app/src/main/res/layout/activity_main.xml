@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="org.hackesta.samplepostprogress.MainActivity"
+    android:weightSum="10"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/login_button"
+        android:layout_weight="1.5" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_photo_library"
+        android:id="@+id/ivPhoto"
+        android:layout_weight="4.5"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="Open Photo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/btnOpenPhoto"
+        android:layout_weight="1.5" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <TextView
+            android:text="Progress:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProgress"
+            android:layout_marginBottom="5dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar" />
+    </LinearLayout>
+
+    <Button
+        android:text="Post to Facebook"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/btnPost"
+        android:layout_weight="1.5"/>
+</LinearLayout>
